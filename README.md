@@ -1,34 +1,6 @@
 # Projeto Dino World
 Jogo feito na disciplina de POO
 
-## Equipe
-Giovanna Gennari Jungklaus
-
-
-## Objetivo 
-O dino deve chegar no forte da sua cor primeiro, passando pelo ovo do seu filhote, com a maior pontuação possível.
-
-## Regras
-
-
-## Surpresas
-
-## Tutorial
-
-# Vídeos do Projeto
-
-## Vídeo da Prévia 
-
-
-
-
-
-# Slides do Projeto
-
-## Slides da prévia 
-
-# Modelo de Apresentação do Projeto
-
 # Estrutura de Arquivos e Pastas
 
 A estrutura aqui apresentada é uma simplificação daquela proposta pelo [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/). Também será aceito que o projeto adote a estrutura completa do Cookiecutter Data Science e isso será considerado um diferencial. A estrutura geral é a seguinte e será detalhada a seguir:
