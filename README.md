@@ -27,20 +27,6 @@ Projeto em Java, incluindo todos os arquivos de dados e bibliotecas necessários
 
 Mídias usadas no seu projeto: vídeo da execução do jogo, imagens da interface, slides de proposta de jogo e apresentação de destaques do código. 
 
-# Modelo para Apresentação do Projeto
-
-Este é um guia de como produzir documentação em Markdown. Para entender como criar documentos em Markdown no Github, veja o material/vídeo:
-[Guia de Uso do Markdown](https://github.com/mc-unicamp/oficinas/tree/master/docs).
-
-Vide detalhes sobre o Markdown em: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
-
-E mais especificamente sobre tabelas em: [Organizing information with tables](https://help.github.com/en/articles/organizing-information-with-tables)
-
-Segue abaixo o modelo de como deve ser documentado o projeto e cada componente do projeto. Tudo o que for indicado entre `<...>` indica algo que deve ser substituído pelo indicado. No modelo são colocados exemplos ilustrativos, que serão substituídos pelos do seu projeto.
-
-Para a construção dos diagramas, devem ser usados modelos disponíveis em: [Diagramas de Classes, Interfaces e Componentes](https://docs.google.com/presentation/d/1ML3WrnDtzh-4wqLmdXN9au1TBIwEqo7TIbMLNOYSMAI/edit?usp=sharing)
-
-
 # Projeto `Dino World`
 
 # Descrição Resumida do Jogo
@@ -161,6 +147,7 @@ Ao executar o jogo algumas vezes, notamos percebemos detalhes que tornariam a ex
 mais agradável e intuitiva no jogo. Assim, adicionamos os seguintes à interface gráfica:
 
 `Janelas PopUp`
+
 Informar ao usuário qual surpresa foi sorteada através de pop up windows ao invés de apenas
   incrementar a pontuação no painel.
   
@@ -177,15 +164,27 @@ if (s instanceof Meteor){
 
 
 `Dino na mesma célula do Ovo`
+
 Mostrar quando o dino está na casa do seu ovo e deve chocá-lo, assim como mostrar nas suas infos se ele já o possui;
 
 ![Dino com ovo](assets/Icons/dino1egg.png)
 
 ` Mostrar player seguinte abaixo dos botões de movimentação`
 
-Mostrar na interface qual o pŕoximo player a jogar.
+Mostrar na interface qual o próximo player a jogar.
 
 ![Player Seguinte](assets/NextPlayer.png)
+
+
+### Uso de Hierarquia  
+
+Usamos hierarquia para reconhecer surpresa, atualizar pontuação e mostrar surpresa na popup window 
+
+Na interface `ISurprise` há o seguinte método:
+```Java 
+public int pointsToAdd();
+```
+O uso de hieraquia facilita a incremetação dos pontos de cada jogador, pois essa função é sobrescrita por aquelas que extendem a `Surprise`, como `Meteor`, `Food `Rock` e `StarPowerUp`, evitando uma verificação com ifs ou instâncias.
 
 
 # Destaques de Pattern
@@ -214,26 +213,14 @@ Este é outro diagrama de um projeto de vendas:
 
 ## Código do Pattern
 
-### Uso de Hierarquia e Interface 
 
-Interface ISurprise
-
-Usamos hierarquia para reconhecer surpresa, atualizar pontuação e mostrar surpresa na popup window 
-
-
-~~~java
-// Recorte do código do pattern seguindo as mesmas diretrizes de outros destaques
-public void algoInteressante(…) {
-   …
-   trechoInteressante = 100;
-}
-~~~
 
 > <Explicação de como o pattern foi adotado e quais suas vantagens, referenciando o diagrama.>
 
 # Conclusões e Trabalhos Futuros
 
-> <Apresente aqui as conclusões do projeto e propostas de trabalho futuro. Esta é a oportunidade em que você pode indicar melhorias no projeto a partir de lições aprendidas e conhecimentos adquiridos durante a realização do projeto, mas que não puderam ser implementadas por questões de tempo. Por exemplo, há design patterns aprendidos no final do curso que provavelmente não puderam ser implementados no jogo -- este é o espaço onde você pode apresentar como aplicaria o pattern no futuro para melhorar o jogo.>
+> Concluímos que uma boa interface gráfica é de suma importância para um jogo e entender sobre GUI foi importante para contruí-la. Além disso, trabalhar com 
+eventos também não é uma tarefa fácil, mas esta é uma ótima ferramenta para obter inputs do jogador. O trabalho em grupo foi a chave para conseguirmos entender esses conceitos e aplicá-los. Por fim, se tivessemos mais tempo implementariamos um Bot para que o jogo pudesse ser jogado em menos de 4 pessoas. Além disso, também aumentariamos o encapsulamento do jogo, evitando fazer verificações diretas sobre as células em classes fora do tabuleiro. De modo geral, ficamos muito contentes com o resultado, mas ainda faríamos essas melhorias.>
 
 # Documentação dos Componentes
 
@@ -633,10 +620,10 @@ public interface IGraphicInterface {
 
 Método | Objetivo
 -------| --------
-public void connect(IBoard b) | Conecta o tabuleiro
-public void connect(IActor[] dinos) | Conecta os atores
-public void printGame() | Mostra o jogo na tela com todas as imagens
-public void updateBoardView(int next) | Mostra o estado atual do jogo
+`public void connect(IBoard b)` | Conecta o tabuleiro
+`public void connect(IActor[] dinos)` | Conecta os atores
+`public void printGame()` | Mostra o jogo na tela com todas as imagens
+`public void updateBoardView(int next)` | Mostra o estado atual do jogo
 
 
 
