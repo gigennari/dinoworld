@@ -8,11 +8,7 @@ A estrutura aqui apresentada é uma simplificação daquela proposta pelo [Cooki
 ~~~
 ├── README.md          <- apresentação do projeto
 │
-├── data               <- dados usados pelo jogo (se houver)
-│
-├── notebooks          <- Jupyter notebooks ou equivalentes
-│
-├── src                <- projeto em Java (preferencialmente projeto no Eclipse)
+├── src                <- projeto em Java 
 │   │
 │   ├── src            <- arquivos-fonte do projeto (.java)
 │   │
@@ -23,25 +19,15 @@ A estrutura aqui apresentada é uma simplificação daquela proposta pelo [Cooki
 └── assets             <- mídias usadas no projeto
 ~~~
 
-Na raiz deve haver um arquivo de nome `README.md` contendo a apresentação do projeto, como detalhado na seção seguinte.
-
-## `data`
-
-Arquivos de dados usados no projeto, quando isso ocorrer. Por exemplo, se o jogo lê mapas de labirintos que estão em arquivo-texto, coloque os arquivos aqui (mesmo que você mantenha uma cópia no diretório do código).
-
-## `notebooks`
-
-Testes ou prototipos relacionados ao projeto que tenham sido executados no Jupyter. Por exemplo, coloque aqui uma cópia dos testes feitos nas Exceptions.
-
 ## `src`
 
-Projeto em Java, preferencialmente em Eclipse, incluindo todos os arquivos de dados e bibliotecas necessários para a sua execução. Dentro dessa pasta sugerimos que você mantenha uma estrutura equivalente ao Eclipse, com uma subpasta `src` onde estarão os fontes e outra subpasta `bin` onde estarão os bytecodes.
+Projeto em Java, incluindo todos os arquivos de dados e bibliotecas necessários para a sua execução. Dentro dessa pasta há uma subpasta `src` onde estão os fontes e outra subpasta `bin` onde estão os bytecodes.
 
- Acrescente na raiz um arquivo `README.md` com as instruções básicas de instalação e execução.
+ O arquivo `README.md` contém as instruções básicas de instalação e execução.
 
 ## `assets`
 
-Qualquer mídia usada no seu projeto: vídeo, imagens, animações, slides etc. Coloque os arquivos aqui (mesmo que você mantenha uma cópia no diretório do código).
+Mídias usadas no seu projeto: vídeo da execução do jogo, imagens da interface, slides de proposta de jogo e apresentação de destaques do código. 
 
 # Modelo para Apresentação do Projeto
 
@@ -56,9 +42,8 @@ Segue abaixo o modelo de como deve ser documentado o projeto e cada componente d
 
 Para a construção dos diagramas, devem ser usados modelos disponíveis em: [Diagramas de Classes, Interfaces e Componentes](https://docs.google.com/presentation/d/1ML3WrnDtzh-4wqLmdXN9au1TBIwEqo7TIbMLNOYSMAI/edit?usp=sharing)
 
-# Modelo para Apresentação do Projeto
 
-# Projeto `<Título do Projeto/Jogo>`
+# Projeto `Dino World`
 
 # Descrição Resumida do Projeto/Jogo
 
@@ -74,15 +59,15 @@ Para a construção dos diagramas, devem ser usados modelos disponíveis em: [Di
 > [Vídeo](https://youtu.be/SdN0JPa0CSU)
 
 ## Vídeo do Jogo
-> <Coloque um link para o vídeo em que é demonstrada a versão final do jogo. Esse vídeo deve ter em torno de 5 minutos. Este vídeo não apresenta slides, nem substitui a apresentação final do projeto, que será feita por conferência. Ele mostra apenas o jogo em funcionamento.>
+> [Vídeo](assets/GameDemonstration.mp4)
 
 # Slides do Projeto
 
 ## Slides da Prévia
-[/assets/GameProposal.pdf]
+[Slides](/assets/GameProposal.pdf)
 
 ## Slides da Apresentação Final
-`<Coloque um link para os slides da apresentação final do projeto.>`
+[Slides]()
 
 ## Relatório de Evolução
 
