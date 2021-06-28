@@ -89,6 +89,29 @@ public class BoardView {
                     }
                 }
 
+                else if (board[i][j].getHasFort()) {
+                    matrix[i][j] = new JLabel(castle, JLabel.CENTER);
+                    if(i == 0 && j == 0){
+                        float[] hsb = Color.RGBtoHSB(219, 59, 70, null);
+                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
+                    }
+                    else if(i == 0  && j == 12){
+                        float[] hsb = Color.RGBtoHSB(132, 100, 59, null);
+                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
+                    }
+                    else if(i == 12  && j == 0){
+                        float[] hsb = Color.RGBtoHSB(250, 164, 49, null);
+                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
+                    }
+                    else if(i == 12 && j == 12){
+                        float[] hsb = Color.RGBtoHSB(44, 183, 151, null);
+                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
+                    }
+
+                    matrix[i][j].setOpaque(true);
+
+                }
+
                 else if (board[i][j].getHasLava()) {
                     matrix[i][j] = new JLabel(lava, JLabel.CENTER);
                 }
@@ -129,28 +152,7 @@ public class BoardView {
                 else if (board[i][j].getVolcano() != null) {
                     matrix[i][j] = new JLabel(volcano, JLabel.CENTER);
                 }
-                else if (board[i][j].getHasFort()) {
-                    matrix[i][j] = new JLabel(castle, JLabel.CENTER);
-                    if(i == 0 && j == 0){
-                        float[] hsb = Color.RGBtoHSB(219, 59, 70, null);
-                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
-                    }
-                    else if(i == 0  && j == 12){
-                        float[] hsb = Color.RGBtoHSB(132, 100, 59, null);
-                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
-                    }
-                    else if(i == 12  && j == 0){
-                        float[] hsb = Color.RGBtoHSB(250, 164, 49, null);
-                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
-                    }
-                    else if(i == 12 && j == 12){
-                        float[] hsb = Color.RGBtoHSB(44, 183, 151, null);
-                        matrix[i][j].setBackground(Color.getHSBColor(hsb[0], hsb[1], hsb[2]));
-                    }
 
-                    matrix[i][j].setOpaque(true);
-
-                }
 
                 else{
                     matrix[i][j] = new JLabel();

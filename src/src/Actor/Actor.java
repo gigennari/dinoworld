@@ -101,12 +101,12 @@ public class Actor implements IActor {
 
     public boolean getIsAlive(IBoard b){
         //check if he can still reach the fort or he is not surrounded by lava
-        if(isSurrounded(fortX, fortY, b)){
+        if(isSurrounded(fortX, fortY, b) && !starPowerUpOn){
             isAlive = false;
             b.getCellsSpace()[i][j].setDino(null);
             return isAlive;
         }
-        else if(isSurrounded(i, j, b) ){
+        else if(isSurrounded(i, j, b) && !starPowerUpOn){
             isAlive = false;
             b.getCellsSpace()[i][j].setDino(null);
             return isAlive;

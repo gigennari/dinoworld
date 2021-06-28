@@ -47,6 +47,7 @@ public class Control implements IControl {
 
         graphicInterface.connect(b);
 
+
         //get dino names
         for (int z = 0; z < 4; z++) {
             if (names[z].equals("")){

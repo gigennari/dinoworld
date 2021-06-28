@@ -22,7 +22,7 @@ public class Volcano implements IVolcano{
         boolean valid  = false;
         int i = 0;
 
-        while((valid != true) && i < 9) {
+        while( valid == false && i < 9){
 
             //generates random number
             Random rand = new Random(); //instance of random class
@@ -49,8 +49,8 @@ public class Volcano implements IVolcano{
             int newX = lastLavaX + rand_i;
             int newY = lastLavaY + rand_j;
             ICell[][] cells = b.getCellsSpace();
-            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 12 && cells[newX][newY].getHasFort() == false && cells[newX][newY].getHasEgg() == false &&
-                    cells[newX][newY].getHasLava() == false && cells[newX][newY].getDino() == null &&
+            if(newX >= 0 && newX <= 12 && newY >= 0 && newY <= 12 && !cells[newX][newY].getHasFort() && !cells[newX][newY].getHasEgg() &&
+                    !cells[newX][newY].getHasLava() && cells[newX][newY].getDino() == null &&
                 cells[newX][newY].getVolcano() == null) {
                 if(cells[newX][newY].getSurprise() != null){
                     cells[newX][newY].setSurprise(null);
@@ -58,8 +58,8 @@ public class Volcano implements IVolcano{
 
                 newPos[0] = newX;
                 newPos[1] = newY;
-                lastLavaX = newPos[0];
-                lastLavaY = newPos[1];
+                lastLavaX = newX;
+                lastLavaY = newY;
                 valid = true;
                 return newPos;
             }
