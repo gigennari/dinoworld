@@ -84,7 +84,7 @@ Uma janela mostrará o vencedor no final do jogo.
 [Slides](/assets/GameProposal.pdf)
 
 ## Slides da Apresentação Final
-[Slides]()
+[Slides](/assets/FinalPresentation.pdf)
 
 ## Relatório de Evolução
 
